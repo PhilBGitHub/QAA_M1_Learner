@@ -11,6 +11,6 @@ jobs:
     # What type of VM do we want it to run on?
     runs-on: ubuntu-latest
     steps: 
-    - run: echo "Hello, World!"
-    - run: ls
+    - run: echo "Hello, GitHub!"
+    - run: touch test.txt
     

@@ -1,0 +1,16 @@
+name: GitHub Workflow Demo
+
+# Whenever a push is detected on this repo, runs:
+on: [push]
+# can also do things like [pull] [merge] [push pull]
+
+# What do we want our workflow to do
+jobs: 
+  # Name of job
+  actions_demo: 
+    # What type of VM do we want it to run on?
+    runs-on: ubuntu-latest
+    steps: 
+    - run: echo "Hello, GitHub!"
+    - run: touch test.txt
+    

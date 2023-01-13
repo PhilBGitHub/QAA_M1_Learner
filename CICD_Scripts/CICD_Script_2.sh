@@ -1,4 +1,4 @@
-!# /bin/bash
+#! /bin/bash
 
 echo "Listing files in the repo..."
 ls */*

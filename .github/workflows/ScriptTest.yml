@@ -16,9 +16,9 @@ jobs:
     # What type of VM do we want it to run on?
     runs-on: ubuntu-latest
     env:
-      job: ONE
+      JOB: ONE
     steps: 
-      - run: echo job
+      - run: echo JOB
       - run: ls
       - uses: actions/checkout@v3
       - run: ls
@@ -29,9 +29,9 @@ jobs:
   Script_2_Job:
     runs-on: ubuntu-latest
     env:
-      job: TWO
+      JOB: TWO
     steps:
-      - run: echo job
+      - run: echo JOB
       - run: ls
       - uses: actions/checkout@v3
       - run: ls

@@ -18,7 +18,7 @@ jobs:
     env:
       JOB: ONE
     steps: 
-      - run: echo JOB
+      - run: echo $JOB
       - run: ls
       - uses: actions/checkout@v3
       - run: ls
@@ -31,7 +31,7 @@ jobs:
     env:
       JOB: TWO
     steps:
-      - run: echo JOB
+      - run: echo $JOB
       - run: ls
       - uses: actions/checkout@v3
       - run: ls
@@ -42,5 +42,5 @@ jobs:
   Global_Var_Job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo GLOBAL_VAR
-      - run: echo SECRET
+      - run: echo $GLOBAL_VAR
+      - run: echo $SECRET

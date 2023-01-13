@@ -15,7 +15,7 @@ jobs:
       - run: ls
       - uses: actions/checkout@v3
       - run: ls
-      - run: chmod +x CICD_scripts/CICD_test.sh
+      - run: chmod +x CICD_Scripts/CICD_test.sh
       - run: ./CICD_Scripts/CICD_test.sh
       - run: echo "First script run!"
       - run: chmod +x CICD_Scripts/CICD_Script_2.sh

@@ -4,21 +4,43 @@ name: GitHub Workflow Demo
 on: [push]
 # can also do things like [pull] [merge] [push pull]
 
+# In-file Global Variable
+env:
+  GLOBAL_VAR: "A global variable!"
+  SECRET: ${{ secrets.SECRET_VARIABLE }}
+
 # What do we want our workflow to do
 jobs: 
   # Name of job
-  actions_demo: 
+  Script_1_Job: 
     # What type of VM do we want it to run on?
     runs-on: ubuntu-latest
+    env:
+      job: ONE
     steps: 
-      - run: echo "Hello, GitHub!"
+      - run: echo job
       - run: ls
       - uses: actions/checkout@v3
       - run: ls
       - run: chmod +x CICD_Scripts/CICD_test.sh
       - run: ./CICD_Scripts/CICD_test.sh
       - run: echo "First script run!"
+
+  Script_2_Job:
+    runs-on: ubuntu-latest
+    env:
+      job: TWO
+    steps:
+      - run: echo job
+      - run: ls
+      - uses: actions/checkout@v3
+      - run: ls
       - run: chmod +x CICD_Scripts/CICD_Script_2.sh
       - run: ./CICD_Scripts/CICD_Script_2.sh
       - run: echo "Second script run!"
 
+  Global_Var_Job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo GLOBAL_VAR
+      - run: echo SECRET

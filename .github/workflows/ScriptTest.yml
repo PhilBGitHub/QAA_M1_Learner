@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: ls
       - run: chmod +x CICD_Scripts/CICD_test.sh
-      - run: ./ CICD_Scripts/CICD_test.sh
+      - run: ./CICD_Scripts/CICD_test.sh
       - run: echo "First script run!"
 
   Script_2_Job:
@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: ls
       - run: chmod +x CICD_Scripts/CICD_Script_2.sh
-      - run: ./ CICD_Scripts/CICD_Script_2.sh
+      - run: ./ ICD_Scripts/CICD_Script_2.sh
       - run: echo "Second script run!"
 
   Global_Var_Job:

@@ -15,6 +15,7 @@ jobs:
   Script_1_Job: 
     # What type of VM do we want it to run on?
     runs-on: ubuntu-latest
+    # Defines a Job variable, unique to this job
     env:
       JOB: ONE
     steps: 
@@ -23,7 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: ls
       - run: chmod +x CICD_Scripts/CICD_test.sh
-      - run: ./CICD_Scripts/CICD_test.sh
+      - run: ./ CICD_Scripts/CICD_test.sh
       - run: echo "First script run!"
 
   Script_2_Job:
@@ -36,7 +37,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: ls
       - run: chmod +x CICD_Scripts/CICD_Script_2.sh
-      - run: ./CICD_Scripts/CICD_Script_2.sh
+      - run: ./ CICD_Scripts/CICD_Script_2.sh
       - run: echo "Second script run!"
 
   Global_Var_Job:

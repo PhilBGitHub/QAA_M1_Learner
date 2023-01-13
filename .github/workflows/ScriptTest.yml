@@ -13,7 +13,7 @@ jobs:
     steps: 
       - run: echo "Hello, GitHub!"
       - run: ls
-      - run: actions/checkout@v3
+      - uses: actions/checkout@v3
       - run: ls
       - run: chmod +x /CICD_Scripts/CICD_Test.sh
       - run: ./ /CICD_Scripts/CICD_Test.sh
